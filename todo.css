@@ -1,0 +1,124 @@
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    background-color: #374151;
+    color: wheat;
+    padding: 10px 20px 20px 20px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgb(26, 37, 34);
+    text-align: center;
+    width: 50%;
+    margin: 30px auto;
+}
+/* Header */
+h1 {
+    font-size: 30px;
+    color: #f2e7e7;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  /* Input Container */
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  input[type="text"] {
+    width: 75%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold ;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .input-container button {
+    padding: 0px 30px;
+    margin-left: 20px;
+  }
+  
+  button {
+    padding: 6px 10px;
+    border: none;
+    background-color: #1dca4993;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 25%;
+
+  }
+  
+  button:hover {
+    background-color: #16552b;
+  }
+  
+  /* To-Do List */
+  #list {
+    margin-top: 20px;
+  }
+  
+  .todo-item {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #ededed;
+    padding: 2px 5px 2px 0px;
+    border-radius: 4px;
+  }
+  
+  .todo-item input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ededed;
+  }
+  
+  .todo-item button {
+    margin-left: 5px;
+  }
+  
+  .todo-item > button {
+    background-color: #b2b716;
+  }
+  
+  .todo-item > button:hover {
+    background-color: #a05e0c9e;
+  }
+  
+  .todo-item > button + button {
+    background-color: #dc3545;
+  }
+  
+  .todo-item > button + button:hover {
+    background-color: #970b19;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .container {
+      width: 95%;
+    }
+  }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ToDo Application</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<!-- <body>
+  <h1>Todo list</h1>
+  <div>
+    <div id="todo-1">
+      <h4>1. Take class</h4>
+      <button onclick="deleteTodo(1)">delete</button>
+    </div>
+    <div id="todo-2">
+      <h4>2. Go out to eat</h4>
+      <button onclick="deleteTodo(2)">delete</button>
+    </div>
+  </div>
+  <div>
+    <input type="text"></input>
+    <button>Add Todo</button>
+  </div>
+</body>
+
+<script>
+  function deleteTodo(index) {
+    const element = document.getElementById("todo-" + index);
+    element.parentNode.removeChild(element);
+  }
+</script> -->
+
+<body>
+  <h1>Todo list</h1>
+  <input type="text"></input>
+  <button onclick="addTodo()" placeholder="What to do!">Add ToDo</button>
+</body>
+  <script>
+    let ctr = 1;
+    function deleteTodo(index){
+      const element = document.getElementById(index);
+      element.parentNode.removeChild(element);
+    }
+    function addTodo(){
+      const inputEl = document.querySelector("input").value;
+      const spanEl = document.createElement("span");
+      const buttonEl = document.createElement("button");
+      spanEl.innerHTML = inputEl;
+      buttonEl.innerHTML = "Remove";
+
+      const newDiv = document.createElement("div");
+      newDiv.appendChild(spanEl);
+      newDiv.appendChild(buttonEl); 
+      
+      document.querySelector("body").appendChild(newDiv);
+      ctr += 1;
+    }
+  </script>
+
+</html>
